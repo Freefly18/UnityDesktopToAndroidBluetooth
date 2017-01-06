@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dolphins.Salaam</name>
+    </assembly>
+    <members>
+        <member name="T:Dolphins.Salaam.SalaamBrowser">
+            <summary>
+            This class is used to find the SalaamService servers.
+            </summary>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamBrowser.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dolphins.Salaam.SalaamBrowser"/> class.
+            </summary>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamBrowser.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamBrowser.Start(System.String)">
+            <summary>
+            Starts the specified service type.
+            </summary>
+            <param name="serviceType">Type of the service.</param>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamBrowser.Stop">
+            <summary>
+            Stops the service.
+            </summary>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamBrowser.SalaamClients">
+            <summary>
+            Gets the current list of the SalaamClients.
+            </summary>
+            <value><c>SalaamClient[]</c> is an array of SalaamClient clients that have been appeared and have not been disappeared yet.</value>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamBrowser.SelfApplicationServices">
+            <summary>
+            Gets or sets the self application services.
+            </summary>
+            <value>The self application services entries.</value>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamBrowser.ClientAppeared">
+            <summary>
+            Occurs when a new client appears.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamBrowser.ClientDisappeared">
+            <summary>
+            Occurs when a found client disappears.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamBrowser.ClientMessageChanged">
+            <summary>
+            Occurs when the client message changes.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamBrowser.Started">
+            <summary>
+            Occurs when the browser starts listening for incoming connections.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamBrowser.Stopped">
+            <summary>
+            Occurs when browsers stops listening for incoming connections.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamBrowser.StartFailed">
+            <summary>
+            Occurs when the browser fails to start.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamBrowser.BrowserFailed">
+            <summary>
+            Occurs when something happens and the browser cannot continue listening for incoming connections anymore.
+            </summary>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamBrowser.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Dolphins.Salaam.SalaamBrowser"/> is enabled.
+            </summary>
+            <value><c>true</c> if enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamBrowser.DisappearanceDelay">
+            <summary>
+            Gets or sets the disappearance delay in seconds.
+            </summary>
+            <value>The disappearance delay.</value>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamBrowser.ServiceType">
+            <summary>
+            Gets the type of the service.
+            </summary>
+        </member>
+        <member name="T:Dolphins.Salaam.SalaamBrowser.SalaamClientEventHandler">
+            <summary>
+             Represents the method that will handle an event that contains the SalaamClient object.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <c>SalaamClientEventArgs</c> that contains SalaamClient object.</param>
+        </member>
+        <member name="T:Dolphins.Salaam.SalaamBrowser.SalaamClientDateTime">
+            <summary>
+            A private class used to hold the DateTime objects for the Individual SalaamClients
+            </summary>
+        </member>
+        <member name="T:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry">
+            <summary>
+            This class represents a self application service entry.
+            </summary>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry.#ctor(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry"/> class.
+            </summary>
+            <param name="serviceType">Type of the service.</param>
+            <param name="servicePort">The service port.</param>
+            <param name="shouldBeIgnored">if set to <c>true</c> the service should be ignored.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry.op_Equality(Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry,Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="serviceTypePortEntry1">The service type port entry1.</param>
+            <param name="serviceTypePortEntry2">The service type port entry2.</param>
+            <returns>The result of the operator.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry.op_Inequality(Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry,Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="serviceTypePortEntry1">The service type port entry1.</param>
+            <param name="serviceTypePortEntry2">The service type port entry2.</param>
+            <returns>The result of the operator.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>
+            true if the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>; otherwise, false.
+            </returns>
+            <param name="obj">The <see cref="T:System.Object"/> to compare with the current <see cref="T:System.Object"/>. 
+                            </param><exception cref="T:System.NullReferenceException">The <paramref name="obj"/> parameter is null.
+                            </exception><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type. 
+            </summary>
+            <returns>
+            A hash code for the current <see cref="T:System.Object"/>.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry.ServiceType">
+            <summary>
+            Gets the type of the service.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry.Port">
+            <summary>
+            Gets the application's port.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamBrowser.SalaamServiceTypePortEntry.ShouldBeIgnored">
+            <summary>
+            Gets or sets a value indicating whether the service should be ignored in browsing.
+            </summary>
+            <value><c>true</c> if should be ignored; otherwise, <c>false</c>.</value>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dolphins.Salaam.SalaamClient">
+            <summary>
+            This class represents a SalaamClient that contains the client information.
+            </summary>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamClient.#ctor(System.Net.IPAddress,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dolphins.Salaam.SalaamClient"/> class.
+            </summary>
+            <param name="address">The address of the client.</param>
+            <param name="hostName">Name of the client host.</param>
+            <param name="serviceType">Type of the service.</param>
+            <param name="name">The name of the application.</param>
+            <param name="port">The application port.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamClient.op_Equality(Dolphins.Salaam.SalaamClient,Dolphins.Salaam.SalaamClient)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="salamClient1">The salaam client1.</param>
+            <param name="salamClient2">The salaam client2.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamClient.op_Inequality(Dolphins.Salaam.SalaamClient,Dolphins.Salaam.SalaamClient)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="salamClient1">The salaam client1.</param>
+            <param name="salamClient2">The salaam client2.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamClient.SetMessage(System.String)">
+            <summary>
+            Sets the message.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamClient.Equals(Dolphins.Salaam.SalaamClient)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamClient.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare with the current <see cref="T:System.Object"/>.</param>
+            <returns>true if the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>; otherwise, false.</returns>
+            <exception cref="T:System.NullReferenceException">The <paramref name="obj"/> parameter is null.
+              </exception>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamClient.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:System.Object"/>.</returns>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamClient.Address">
+            <summary>
+            Gets or Sets the client's address.
+            </summary>
+            <value>The client address.</value>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamClient.HostName">
+            <summary>
+            Gets or Sets the name of the host.
+            </summary>
+            <value>The name of the host.</value>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamClient.Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamClient.ServiceType">
+            <summary>
+            Gets the type of the service.
+            </summary>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamClient.Port">
+            <summary>
+            Gets the client application port.
+            </summary>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamClient.Message">
+            <summary>
+            Gets the message.
+            </summary>
+        </member>
+        <member name="T:Dolphins.Salaam.SalaamService">
+            <summary>
+            This class is used to register SalaamService. 
+            </summary>
+            <remarks>SalaamService registers a unique service that SalaamBrowser clients will find it immediately.</remarks>
+        </member>
+        <member name="F:Dolphins.Salaam.SalaamService.port">
+            <summary>
+            The default SalaamService port.
+            </summary>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamService.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dolphins.Salaam.SalaamService"/> class.
+            </summary>
+            <param name="serviceType">Type of the service.</param>
+            <param name="name">The name of the application.</param>
+            <param name="port">The port at which the mail application is listening.</param>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamService.Register">
+            <summary>
+            Registers the SalaamService.
+            </summary>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamService.Unregister">
+            <summary>
+            Unregisters the SalaamService.
+            </summary>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamService.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Dolphins.Salaam.SalaamService.SendDisappearanceMessage">
+            <summary>
+            Sends the disappearance message.
+            </summary>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamService.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Dolphins.Salaam.SalaamService"/> is enabled.
+            </summary>
+            <value><c>true</c> if enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamService.Frequency">
+            <summary>
+            Gets or sets the frequency in minute.
+            </summary>
+            <value>The frequency.</value>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamService.BroadcastAddress">
+            <summary>
+            Gets or sets the broadcast address.
+            </summary>
+            <value>The broadcast address.</value>
+            <remarks>The default IPAddress is 255.255.255.255 which broadcasts to all the networks.</remarks>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamService.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>The message.</value>
+            <remarks>This is a custom message for your application.</remarks>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamService.Name">
+            <summary>
+            Gets the application name.
+            </summary>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamService.ServiceType">
+            <summary>
+            Gets the type of the service.
+            </summary>
+            <remarks>The service type is a custom string meant to be used to identify the SalaamService. The universal form of this string is preferred to be <c>_applicationProtocolName</c>.<c>_networkProtocolName</c>. e.g. _teleporter._tcp </remarks>
+        </member>
+        <member name="P:Dolphins.Salaam.SalaamService.Port">
+            <summary>
+            Gets the application port.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamService.CreationFailed">
+            <summary>
+            Occurs when the SalaamService fails to create the service.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamService.BroadcastFailed">
+            <summary>
+            Occurs when the SalaamService fails to broadcast on the network.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamService.Registered">
+            <summary>
+            Occurs when the service is successfully registered.
+            </summary>
+        </member>
+        <member name="E:Dolphins.Salaam.SalaamService.Unregistered">
+            <summary>
+            Occurs when the service is successfully unregistered.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\bin\Debug\BluetoothToTCP.exe
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\bin\Debug\BluetoothToTCP.pdb
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\obj\Debug\BluetoothToTCP.csprojResolveAssemblyReference.cache
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\obj\Debug\BluetoothToTCP.Form1.resources
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\obj\Debug\BluetoothToTCP.Properties.Resources.resources
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\obj\Debug\BluetoothToTCP.csproj.GenerateResource.Cache
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\obj\Debug\BluetoothToTCP.exe
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\obj\Debug\BluetoothToTCP.pdb
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\bin\Debug\Resources\bluetooth-icone-6384.ico
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\bin\Debug\Dolphins.Salaam.dll
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\bin\Debug\Dolphins.Salaam.xml
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\bin\Debug\InTheHand.Net.Personal.dll
+C:\Work\Memoire\WindowsFormApps\BluetoothToTCP\BluetoothToTCP\bin\Debug\InTheHand.Net.Personal.xml
